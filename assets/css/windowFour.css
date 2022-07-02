@@ -1,0 +1,304 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Istok Web', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;   
+    -khtml-user-select: none;    
+    -moz-user-select: none;      
+    -ms-user-select: none;       
+    user-select: none;     
+}
+
+img {pointer-events: none;}
+
+body 
+{
+    background-color: #c2e4ff;  
+    overflow: hidden; 
+}
+
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.slider
+{
+    display: block;
+    margin-top: 250px;
+    z-index: 10;
+    filter: drop-shadow(0px 0px 20px #76A4D7);
+}
+
+.slider > h1
+{
+    display: flex;
+    width: 635px;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-left: 130px;
+    color: #5650B1;
+}
+
+.slider > p
+{
+    display: flex;
+    width: 413px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 30px;
+    margin-left: 130px;
+    color: #5650B1;
+}
+
+.slider > span
+{
+    display: flex;
+    margin-top: 50px;
+    width: 250px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+    margin-left: 130px;
+    color: #5650B1;
+}
+
+
+.bay_btn
+{
+position: absolute;
+background: url(../imges/btn.png) center no-repeat;
+width: 310px;
+height: auto;
+border: none;
+padding: 15px;
+border-radius: 50px;
+margin-left: 125px;
+margin-top: 15px;
+font-size: 32px;
+line-height: 36px;
+color: #FFFFFF;
+cursor: pointer;
+}
+
+
+
+
+
+
+.container_popup
+{
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 11;
+}
+
+.popup
+{
+    display: block;
+    width: 60px;
+    height: 428px;
+    background: #fff;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.btns
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+}
+
+.next_btn
+{
+    display: block;
+    padding-top: 15px;
+}
+
+.next_btn > .btn::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #2d2d2d;
+    top: 70px;
+    left: 0;
+    height: 2px;
+}
+
+.btn
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    margin: 8px;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.btn > svg
+{
+    margin-top: -4px;
+    margin-left: -3px;
+}
+
+.active
+{
+    background-color: #FF6D6D;
+    color: #FF6D6D;
+    border: none;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.acteve_a::after
+{
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin-left: 8px;
+    margin-top: -175px;
+    background: #FF6D6D;
+    filter: blur(6px);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.btn> a 
+{
+    color: #2d2d2d;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.active > svg
+{
+    margin-top: -5px;
+    fill: #fff;
+    margin-left: -0.1px;
+}
+
+.wrapper > .bg_img
+{
+    display: flex;
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.active_popup
+{
+    width: 196px;
+    transition: .5s;
+}
+
+
+.none
+{
+    display: none;
+}
+
+.txt_popup
+{
+    position: absolute; 
+    color: #5A5A5A;
+    margin-left: 55px;
+    margin-top: -43px;
+    font-size: 20px;
+    text-align: left;
+    width: 200px;
+    display: none;
+}
+
+.txt_active
+{
+    display: block;
+    transition: 1s;
+    animation: kere 1s;
+}
+
+@keyframes kere 
+{
+    0%
+    {
+        opacity: 0;
+    } 
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+svg > path
+{
+    transition: 1s;
+}
+
+.container_gallery:hover  .btn_gallery path
+{
+    fill: #4F91EC;
+    transition: .3s; 
+}
+
+.container_gallery:hover  .gallery
+{
+    color: #4F91EC;
+    transition: .3s; 
+}
+
+.home
+{
+    color: #FF6D6D;
+}
+
+.container_contacts:hover  .btn_contacts path
+{
+    fill: #FBD476;
+    transition: .3s; 
+}
+
+.container_contacts:hover  .contacts
+{
+    color: #FBD476;
+    transition: .3s; 
+}
+
+.container_about:hover  .btn_about path
+{
+    fill: #64F061;
+    transition: .3s; 
+}
+
+.container_about:hover  .about
+{
+    color: #64F061;
+    transition: .3s; 
+}
+
+.translate:hover
+{
+    color: #5F58C6;
+    transition: .3s;
+}
+
